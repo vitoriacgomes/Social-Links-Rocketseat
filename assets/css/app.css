@@ -1,0 +1,120 @@
+:root {
+    font-size: 10px;
+    --primary-color: #ecebf2;
+    --secondary-color: #228ca6;
+    --shadow-color: #c4c4c4;
+    --links-svg-filter: invert(46%) sepia(96%) saturate(380%) hue-rotate(145deg)
+      brightness(84%) contrast(88%);
+  }
+  
+  html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::after,
+  *::before {
+    box-sizing: inherit;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+    background: url("../img/Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .tree {
+    margin: 126px auto;
+    padding-inline: 44px;
+    max-width: 414px;
+  }
+  .img-container {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .image-border {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .main-image {
+    position: relative;
+    width: 98%;
+    height: 98%;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .shadow {
+    content: "";
+    position: absolute;
+    width: 98%;
+    height: 98%;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    box-shadow: inset 0px -28px 42px -5px var(--shadow-color);
+  }
+  .main-image-legend {
+    display: block;
+    width: 100%;
+    position: relative;
+    left: -4px;
+    text-align: center;
+    margin-top: 22px;
+    font-weight: 300;
+    color: var(--secondary-color);
+  }
+  
+  .links-container {
+    margin: 33px auto 66px auto;
+  }
+  .links-container > a {
+    display: block;
+    width: 100%;
+    padding: 12px 2px;
+    border: 2px solid var(--secondary-color);
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 16px;
+    color: var(--secondary-color);
+  }
+  
+  .links-container > a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+  }
+  
+  .links-container > a:first-of-type {
+    margin: 0;
+  }
+  
+  .social-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .social-container > a:hover {
+    transition: all 200ms ease-in;
+    transform: scale(1.5);
+  }
+  
+  .social-container img {
+    filter: var(--links-svg-filter);
+  }
